@@ -1,4 +1,5 @@
 # Profanity-filter
 
 This is an extension for google chrome
-second line
+
+This extension filters out any curse words extracted from the webpage
