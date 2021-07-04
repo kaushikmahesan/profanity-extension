@@ -1,0 +1,21 @@
+{
+    "name":"Server connection test",
+    "description":"To test the connection with the backend",
+    "version":"1.0",
+    "manifest_version":2,
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "http://127.0.0.1:5000/*"
+    ],
+    "content_scripts":[{
+        "matches":["*://*/*"],
+        "all_frames": true,
+        "js": ["popup.js"],
+        "run_at": "document_end"
+    }],
+    "browser_action":{
+        "default_popup":"popup.html"
+    }
+}
