@@ -10,13 +10,14 @@ function clickHandler() {
             files: ['changeText.js']
         });
         */
-        chrome.tabs.executeScript({file: "sendData.js"});
-    
+        chrome.tabs.executeScript({file: "sendDataWithChange.js"});
+        /*
         chrome.runtime.onMessage.addListener(function(msg, sender, response){
-            var result = msg.occurances
+            var result = msg.text
 
             document.getElementById("buttonPress").innerHTML = result;
         });
+        */
 
 }
 
