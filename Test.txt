@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 This is a test.
+=======
+This is a test
+>>>>>>> c709a9af693f7968757d21adb715cf8795c381d0
