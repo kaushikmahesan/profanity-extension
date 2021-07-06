@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
-import json
-import sys
 from flask_cors import CORS
+import json
+from better_profanity import profanity
+
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
@@ -13,12 +14,21 @@ def hello_World():
 def testjson():
     print("called /testjson")
     req = json.loads(request.data)
-    print(req)
 
     #change the words here
-    value = req["data"]
-    res = jsonify({"occurances": value})
+    value = req["text"]
+    censored ={}
+    for i in range(len(value)):
+        censored[i] = profanity.censor(value[i])    
+        print(censored[i])
+    
+
+
+    res = json.dumps(censored)
+    print("printing the json file")
+    print(res)
     return res
 
 if __name__ == '__main__':
+    profanity.load_censor_words()
     app.run(debug=True)

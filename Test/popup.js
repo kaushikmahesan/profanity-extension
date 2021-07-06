@@ -10,13 +10,15 @@ function clickHandler() {
             files: ['changeText.js']
         });
         */
-        chrome.tabs.executeScript({file: "sendData.js"});
-    
-        chrome.runtime.onMessage.addListener(function(msg, sender, response){
-            var result = msg.occurances
+        chrome.tabs.executeScript({file: "sendDataWithChange.js"});
 
-            document.getElementById("buttonPress").innerHTML = result;
+        //the message is being received over here
+        /*
+        chrome.runtime.onMessage.addListener(function(msg, sender, response){
+            var censoredText = msg;
+            document.getElementById("buttonPress").innerHTML = "been here";
         });
+        */
 
 }
 
