@@ -17,11 +17,14 @@ def testjson():
 
     #change the words here
     value = req["text"]
+    censored ={}
     for i in range(len(value)):
-        value[i] = profanity.censor(value[i])    
-        print(value[i])
+        censored[i] = profanity.censor(value[i])    
+        print(censored[i])
     
-    res = jsonify(text=value)
+
+
+    res = json.dumps(censored)
     print("printing the json file")
     print(res)
     return res
