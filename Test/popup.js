@@ -11,11 +11,12 @@ function clickHandler() {
         });
         */
         chrome.tabs.executeScript({file: "sendDataWithChange.js"});
+
+        //the message is being received over here
         /*
         chrome.runtime.onMessage.addListener(function(msg, sender, response){
-            var result = msg.text
-
-            document.getElementById("buttonPress").innerHTML = result;
+            var censoredText = msg;
+            document.getElementById("buttonPress").innerHTML = "been here";
         });
         */
 

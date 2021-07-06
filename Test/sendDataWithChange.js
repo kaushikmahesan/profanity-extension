@@ -19,8 +19,10 @@ function sendDataFromTab() {
     .then(response => response.json())
     .then(data => {chrome.runtime.sendMessage(data)})
 
+    //doesn't get called when the server sends message back
     chrome.runtime.onMessage.addListener(function(msg, sender, response){
-        censoredText = msg.text;
+        var censoredText = msg;
+        text[i].innerHTML = "been here";
         for(let i=0; i < text.length; i++){
                 //change the text here
                 text[i].innerHTML = censoredText[i];
