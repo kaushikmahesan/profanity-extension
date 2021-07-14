@@ -15,6 +15,7 @@
         "js": ["popup.js"],
         "run_at": "document_end"
     }],
+
     "browser_action":{
         "default_popup":"popup.html"
     }
