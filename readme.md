@@ -11,3 +11,6 @@ HTML/CSS for UI development
 PYTHON flask for server management
 
 Bad Words API - "https://www.npmjs.com/package/bad-words"
+
+Javascript for backend
+
